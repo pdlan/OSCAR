@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+find_package(LLVM REQUIRED CONFIG)
+add_definitions(${LLVM_DEFINITIONS})
+include_directories(${LLVM_INCLUDE_DIRS})
+set(CMAKE_CXX_STANDARD 17)
+add_library(analysis MODULE pass.cpp)
