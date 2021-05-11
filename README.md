@@ -1,4 +1,6 @@
 # OSCAR
+This repository contains the source code of our ICML 2021 paper [How could Neural Networks understand Programs?](https://arxiv.org/pdf/2105.04297).
+![Architecture](assets/Architecture.png)
 ## Environment
 Run following commands to build a docker image for the environment:
 
@@ -7,7 +9,7 @@ cd docker
 sudo docker build -t oscar:latest .
 ```
 
-And you can launch a container with nvidia-docker command.
+And you can launch a container with `nvidia-docker` command.
 
 ```shell
 sudo nvidia-docker run -it --mount type=bind,source="$(pwd)",target=/oscar oscar:latest
@@ -33,7 +35,7 @@ To process the data for pretraining and the downstream tasks, enter the coresspo
 Use following commands to pretrain the model:
 
 ```shell
-cd model
+cd /oscar/model
 ./scripts/pretrain.sh
 ```
 
