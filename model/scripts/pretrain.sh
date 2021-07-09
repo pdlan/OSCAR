@@ -35,6 +35,6 @@ python train.py --encoder-normalize-before $FP16 $DATA_DIR --num-workers 0 \
 	--max-sentences $MAX_SENTENCES --update-freq $UPDATE_FREQ --seed $SEED \
 	--mask-prob 0.15 $STATE $POOLING \
 	--embedding-normalize --find-unused-parameters \
-	--max-update $TOTAL_UPDATES --log-format simple --log-interval 1 \
+	--max-update $TOTAL_UPDATES --log-format simple --log-interval 1000 \
 	--skip-invalid-size-inputs-valid-test \
 	--save-dir $SAVE_DIR
