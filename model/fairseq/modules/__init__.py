@@ -25,7 +25,6 @@ from .scalar_bias import ScalarBias
 from .sinusoidal_positional_embedding import SinusoidalPositionalEmbedding
 from .transformer_sentence_encoder_layer import TransformerSentenceEncoderLayer
 from .transformer_sentence_encoder import TransformerSentenceEncoder, IRTransformerSentenceEncoder
-from .irexp_transformer_sentence_encoder import IRTransformerSentenceEncoderNoMiddleLayers
 from .unfold import unfold1d
 from .transformer_layer import TransformerDecoderLayer, TransformerEncoderLayer
 from .vggblock import VGGBlock
@@ -57,11 +56,8 @@ __all__ = [
     'TransformerSentenceEncoderLayer',
     'TransformerSentenceEncoder',
     'IRTransformerSentenceEncoder',
-    'IRTransformerSentenceEncoderNoMiddleLayers',
     'TransformerDecoderLayer',
     'TransformerEncoderLayer',
     'VGGBlock',
     'unfold1d',
-    'LengthProjectionTransformerSentenceDecoder',
-    'IRLengthProjectionTransformerSentenceEncoder',
 ]

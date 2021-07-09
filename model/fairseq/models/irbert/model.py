@@ -223,6 +223,10 @@ class IRBertClassificationHead(nn.Module):
         x = self.out_proj(x)
         return x
 
+def copy_weights(m1, m2):
+    for p1, p2 in zip(m1.parameters(), m2.parameters()):
+        p2.data[:] = p1.data[:]
+
 class IRBertEncoder(FairseqDecoder):
     """BERT encoder.
 

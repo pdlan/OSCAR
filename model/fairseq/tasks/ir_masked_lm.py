@@ -23,7 +23,6 @@ from fairseq.data import (
     PrependTokenDataset,
     SortDataset,
     IRMaskTokensDataset,
-    IRBlockDataset,
     IRPadDataset,
     IRPositionDataset,
     IRDataset,
