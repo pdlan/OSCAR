@@ -380,6 +380,8 @@ def base_architecture(args):
     args.activation_dropout = getattr(args, 'activation_dropout', 0.0)
     args.pooler_activation_fn = getattr(args, 'pooler_activation_fn', 'tanh')
     args.pooler_dropout = getattr(args, 'pooler_dropout', 0.1)
+    args.no_pce = getattr(args, 'no_pce', False)
+    args.no_pooling = getattr(args, 'no_pooling', False)
 
     args.encoder_normalize_before = getattr(args, 'encoder_normalize_before', False)
     args.embedding_normalize = getattr(args, 'embedding_normalize', False)

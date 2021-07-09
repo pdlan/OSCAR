@@ -4,7 +4,7 @@ SAVE_DIR=../checkpoint/pretrain
 TOTAL_UPDATES=1000000
 WARMUP_UPDATES=30000
 PEAK_LR=0.0001
-MAX_POSITIONS=255
+MAX_POSITIONS=511
 MAX_SENTENCES=1
 UPDATE_FREQ=4
 SEED=65535
@@ -35,6 +35,6 @@ python train.py --encoder-normalize-before $FP16 $DATA_DIR --num-workers 0 \
 	--max-sentences $MAX_SENTENCES --update-freq $UPDATE_FREQ --seed $SEED \
 	--mask-prob 0.15 $STATE $POOLING \
 	--embedding-normalize --find-unused-parameters \
-	--max-update $TOTAL_UPDATES --log-format simple --log-interval 1000 \
+	--max-update $TOTAL_UPDATES --log-format simple --log-interval 1 \
 	--skip-invalid-size-inputs-valid-test \
 	--save-dir $SAVE_DIR
