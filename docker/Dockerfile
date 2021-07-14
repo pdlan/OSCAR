@@ -2,7 +2,11 @@ FROM nvidia/cuda:10.2-devel-ubuntu18.04
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
 RUN apt-get update && \
-	apt-get install -y git cmake golang-go lsb-release wget software-properties-common
+	apt-get install -y git cmake uuid-runtime lsb-release wget software-properties-common && \
+	wget --quiet https://golang.org/dl/go1.16.6.linux-amd64.tar.gz -O ~/go.tar.gz && \
+	tar xzf ~/go.tar.gz -C /opt/ && \
+	ln -s /opt/go/bin/go /usr/local/bin/go && \
+	rm ~/go.tar.gz
 RUN wget --quiet https://apt.llvm.org/llvm.sh -O ~/llvm.sh && \
 	chmod +x ~/llvm.sh && \
 	~/llvm.sh 11 && \

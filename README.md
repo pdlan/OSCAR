@@ -12,7 +12,7 @@ sudo docker build -t oscar:latest .
 And you can launch a container with `nvidia-docker` command.
 
 ```shell
-sudo nvidia-docker run -it --mount type=bind,source="$(pwd)",target=/oscar oscar:latest
+sudo nvidia-docker run -it --shm-size=100g --mount type=bind,source="$(pwd)",target=/oscar oscar:latest
 ```
 
 To compile the binaries for processing the data:

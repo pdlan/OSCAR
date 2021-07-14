@@ -34,6 +34,7 @@ mkdir -p out/4
 python3 4_json2rawtext.py out/2 out/3 out/4 $variants $processes out/2/state_dict.txt 50
 
 ./5_buildvocab out/4 $variants out/4/inst_dict.txt out/4/state_dict.txt
+mkdir -p ../data-bin/pretrain
+cp out/3/bpe_codes ../data-bin/pretrain
 cd ../model
 ./scripts/moco_preprocess.sh ../process-pretrain-data/out/4/ ../data-bin/pretrain $variants
-cp out/3/bpe_codes ../data-bin/pretrain/
