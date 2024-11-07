@@ -26,7 +26,7 @@ Then the OSCAR LLVM analyzer pass (located in `analyzer`), IR Lexer (located in 
 
 ## Processing the data
 
-First, please visit [https://1drv.ms/u/s!AjYwgux2zLgMiAhYpoCU3jLu20Z6?e=XR52y9](https://1drv.ms/u/s!AjYwgux2zLgMiAhYpoCU3jLu20Z6?e=XR52y9) to download the data for pretraining and downstream tasks. Extract the downloaded tarballs to the `data-raw` directory.
+First, please visit <https://1drv.ms/f/c/0cb8cc76ec823036/EjYwgux2zLgggAwIBAAAAAAB7290YKG35xKA4FX5_eqvEg?e=b5XdV7> to download the data for pretraining and downstream tasks. Extract the downloaded tarballs to the `data-raw` directory.
 
 To process the data for pretraining and the downstream tasks, enter the coressponding directories and execute `./process.sh`. Raw data needs to be placed in the directory `data-raw`. Processed data will be placed in the directory `data-bin`.
 
